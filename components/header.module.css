@@ -45,13 +45,14 @@
 .avatar {
   border-radius: 2rem;
   float: left;
-  height: 2.8rem;
-  width: 2.8rem;
+  height: 1.8rem;
+  width: 1.8rem;
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/*
 .button,
 .buttonPrimary {
   float: right;
@@ -90,3 +91,4 @@
   display: inline-block;
   margin-right: 1rem;
 }
+*/

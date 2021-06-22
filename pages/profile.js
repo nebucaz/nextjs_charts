@@ -4,7 +4,7 @@ import { useSession, getSession } from 'next-auth/client'
 export default function Profile() {
     const [ session, loading ] = useSession()
 
-    return <>
+    return <Layout>
     {!session && <>
       Not signed in <br/>
       <button onClick={() => signIn()}>Sign in</button>
@@ -13,7 +13,7 @@ export default function Profile() {
       Signed in as {session.user.email} <br/>
       <button onClick={() => signOut()}>Sign out</button>
     </>}
-  </>
+    </Layout>
 };
 
   /*

@@ -1,4 +1,7 @@
 import { Provider } from 'next-auth/client'
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'
 
 // Use the <Provider> to improve performance and allow components that call
