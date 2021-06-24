@@ -35,8 +35,8 @@ export default function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <NavDropdown title="Kategorie" id="nav-dropdown">
-                            <NavDropdown.Item eventKey="3.1" href="/Video">Video</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="3.2" href="/Book">Bücher</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="3.1" href="/videos">Video</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="3.2" href="/books">Bücher</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#deets">Experten</Nav.Link>
                         <Nav.Link href="#deets">Neuheiten</Nav.Link>
