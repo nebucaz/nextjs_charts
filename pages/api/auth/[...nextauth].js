@@ -116,7 +116,12 @@ export default NextAuth({
     // async signIn(user, account, profile) { return true },
     // async redirect(url, baseUrl) { return baseUrl },
     // async session(session, user) { return session },
-    // async jwt(token, user, account, profile, isNewUser) { return token }
+    async jwt(token, user, account, profile, isNewUser) { 
+        console.log(token)
+
+        // get user, get user roles, return user roles.
+        return token 
+    }
   },
 
   // Events are useful for logging

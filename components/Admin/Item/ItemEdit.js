@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FaCheck, FaEdit, FaTimes } from 'react-icons/fa';
 
-//import ItemService from '../../../Services/itemService';
+import ItemService from '../../../utils/ItemService';
 
 class ItemEdit extends Component {
     constructor(props) {
@@ -80,7 +80,7 @@ class ItemEdit extends Component {
             if (this.state.currentItem.hasOwnProperty("_id")) {
                 ItemService.update(this.state.currentItem._id, data).then(response => {
                     console.log("saved successfully");
-                    this.props.handleUpdate(response.data.item);
+                    this.props.handleUpdate(this.state.currentItem);
                 }).catch(error => {
                     console.log(error);
                 });
@@ -104,7 +104,6 @@ class ItemEdit extends Component {
     deleteItem() {
         ItemService.delete(this.props.item._id).then(response => {
             console.log("deleted successfully");
-            console.log(response);
             this.props.handleUpdate(null);
         }).catch(error => {
             console.log(error);

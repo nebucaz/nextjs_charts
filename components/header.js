@@ -45,6 +45,11 @@ export default function Header() {
                             <NavDropdown.Item eventKey="4.2">Kontakt</NavDropdown.Item>
                             <NavDropdown.Item eventKey="4.2">Zur Bewertung vorschlagen</NavDropdown.Item>
                         </NavDropdown>
+                        <NavDropdown title="Admin" id="nav-dropdown">
+                            <NavDropdown.Item eventKey="4.1" href="/admin/items">Items</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="4.2" href="/admin/users">Users</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="4.2">Zur Bewertung vorschlagen</NavDropdown.Item>
+                        </NavDropdown>
                         <NavDropdown title="Examples" id="nav-dropdown">
                             <NavDropdown.Item eventKey="5.1" href="/client">Client</NavDropdown.Item>
                             <NavDropdown.Item eventKey="5.2" href="/profile">Profile</NavDropdown.Item>

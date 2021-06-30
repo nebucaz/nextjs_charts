@@ -1,21 +1,33 @@
 import axios from 'axios';
-import useSWR from 'swr'
-
-//const fetcher = url =>  axios.get(url).then(res => { return {res.data, null}} )
+import useSWR from 'swr';
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+/*
 const fetcher = (url) =>
   fetch(url)
     .then((r) => r.json())
     .then((data) => {
       return { user: data || null }
     })
+*/
 
 class ItemService {
+    useItem(id) {
+        const { data, error } = useSWR(`/api/user/${id}`, fetcher)
+
+        return {
+            item: data,
+            isLoading: !error && !data,
+            isError: error
+        }
+    }
+
     getAll() {
+        /*
         const { items, error } = useSWR('/api/item', fetcher)
         console.log(items)
         return error ? [] : items;
-
-        //return axios.get("/api/item");
+        */
+        return axios.get("/api/item");
     }
 
     get(id) {
